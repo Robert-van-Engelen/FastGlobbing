@@ -25,18 +25,20 @@ The fast globbing method is used by the [ugrep](https://github.com/Genivia/ugrep
 
 ## Examples
 
-| `*`        | matches `a`, `b`, `x/a`, `x/y/b`         
-| `a`        | matches `a`, `x/a`, `x/y/a` but not `b`, `x/b`, `a/a/b`
-| `/*`       | matches `a`, `b` but not `x/a`, `x/b`, `x/y/a`
-| `/a`       | matches `a` but not `x/a`, `x/y/a`
-| `a?b`      | matches `axb`, `ayb` but not `a`, `b`, `ab`, `a/b`
-| `a[xy]b`   | matches `axb`, `ayb` but not `a`, `b`, `azb`
-| `a[a-z]b`  | matches `aab`, `abb`, `acb`, `azb` but not `a`, `b`, `a3b`, `aAb`, `aZb`
-| `a[^xy]b`  | matches `aab`, `abb`, `acb`, `azb` but not `a`, `b`, `axb`, `ayb`
-| `a[^a-z]b` | matches `a3b`, `aAb`, `aZb` but not `a`, `b`, `aab`, `abb`, `acb`, `azb`
-| `a/*/b`    | matches `a/x/b`, `a/y/b` but not `a/b`, `a/x/y/b`
-| `**/a`     | matches `a`, `x/a`, `x/y/a` but not `b`, `x/b`
-| `a/**/b`   | matches `a/b`, `a/x/b`, `a/x/y/b` but not `x/a/b`, `a/b/x`
-| `a/**`     | matches `a/x`, `a/y`, `a/x/y` but not `a`, `b/x`
-| `a\?b`     | matches `a?b` but not `a`, `b`, `ab`, `axb`, `a/b`
+| pattern    | matches
+| ---------- | -------
+| `*`        | `a`, `b`, `x/a`, `x/y/b`         
+| `a`        | `a`, `x/a`, `x/y/a` but not `b`, `x/b`, `a/a/b`
+| `/*`       | `a`, `b` but not `x/a`, `x/b`, `x/y/a`
+| `/a`       | `a` but not `x/a`, `x/y/a`
+| `a?b`      | `axb`, `ayb` but not `a`, `b`, `ab`, `a/b`
+| `a[xy]b`   | `axb`, `ayb` but not `a`, `b`, `azb`
+| `a[a-z]b`  | `aab`, `abb`, `acb`, `azb` but not `a`, `b`, `a3b`, `aAb`, `aZb`
+| `a[^xy]b`  | `aab`, `abb`, `acb`, `azb` but not `a`, `b`, `axb`, `ayb`
+| `a[^a-z]b` | `a3b`, `aAb`, `aZb` but not `a`, `b`, `aab`, `abb`, `acb`, `azb`
+| `a/*/b`    | `a/x/b`, `a/y/b` but not `a/b`, `a/x/y/b`
+| `**/a`     | `a`, `x/a`, `x/y/a` but not `b`, `x/b`
+| `a/**/b`   | `a/b`, `a/x/b`, `a/x/y/b` but not `x/a/b`, `a/b/x`
+| `a/**`     | `a/x`, `a/y`, `a/x/y` but not `a`, `b/x`
+| `a\?b`     | `a?b` but not `a`, `b`, `ab`, `axb`, `a/b`
 
