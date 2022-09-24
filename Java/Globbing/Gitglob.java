@@ -67,7 +67,7 @@ public class Gitglob {
               text1_backup = -1;
               glob1_backup = -1;
               text2_backup = i;
-              glob2_backup = ++j;
+              glob2_backup = j;
               continue;
             }
             // trailing * matches everything except /

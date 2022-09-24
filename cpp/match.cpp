@@ -237,7 +237,7 @@ bool gitignore_glob_match(const string& text, const string& glob)
             text1_backup = string::npos;
             glob1_backup = string::npos;
             text2_backup = i;
-            glob2_backup = ++j;
+            glob2_backup = j;
             continue;
           }
           // trailing * matches everything except /

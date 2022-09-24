@@ -322,7 +322,7 @@ int gitignore_glob_match(const char *text, const char *glob)
           text1_backup = NULL;
           glob1_backup = NULL;
           text2_backup = text;
-          glob2_backup = ++glob;
+          glob2_backup = glob;
           continue;
         }
         // trailing * matches everything except /
