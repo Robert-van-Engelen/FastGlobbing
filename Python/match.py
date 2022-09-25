@@ -181,8 +181,9 @@ def gitignore_glob_match(text, glob):
                         text1_backup = -1
                         glob1_backup = -1
                         text2_backup = i
-                        j += 1
                         glob2_backup = j
+                        if text[j] != '/':
+                            j += 1
                         continue
                     # trailing * matches everything except /
                     text1_backup = i

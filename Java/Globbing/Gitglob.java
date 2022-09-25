@@ -68,6 +68,8 @@ public class Gitglob {
               glob1_backup = -1;
               text2_backup = i;
               glob2_backup = j;
+              if (text.charAt(i) != '/')
+                j++;
               continue;
             }
             // trailing * matches everything except /

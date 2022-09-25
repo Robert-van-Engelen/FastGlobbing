@@ -323,6 +323,8 @@ int gitignore_glob_match(const char *text, const char *glob)
           glob1_backup = NULL;
           text2_backup = text;
           glob2_backup = glob;
+          if (*text != '/')
+            glob++;
           continue;
         }
         // trailing * matches everything except /

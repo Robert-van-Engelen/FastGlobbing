@@ -238,6 +238,8 @@ bool gitignore_glob_match(const string& text, const string& glob)
             glob1_backup = string::npos;
             text2_backup = i;
             glob2_backup = j;
+            if (text[i] != '/')
+              j++;
             continue;
           }
           // trailing * matches everything except /
