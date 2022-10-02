@@ -177,7 +177,7 @@ exports.gitignore_glob_match = function (text, glob) {
             glob1_backup = -1;
             text2_backup = i;
             glob2_backup = j;
-            if (text.chatAt(i) === '/')
+            if (text.charAt(i) === '/')
               j++;
             continue;
           }
